@@ -20,7 +20,8 @@ $(function () {
 
   var currentIndex = 0;
   var maxIndex = images.length - 1;
-  var interval = 5000; // 8초
+  var interval = 5000;
+  //5초
 
   setInterval(function () {
     currentIndex++;
