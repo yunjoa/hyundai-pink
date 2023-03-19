@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAGE Progrees Bar</title>
+  </head>
+  <body>
+    <h2>PAGE Progrees Bar</h2>
+    <progress id="progress" value="" min="0" max="100"></progress>
+  </body>
+  <link
+    href="
+  https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css
+  "
+    rel="stylesheet"
+  />
+  <style>
+    h2 {
+      padding: 50px;
+      font-size: 2rem;
+      font-weight: 700;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    #progress {
+      appearance: none;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    #progress::-webkit-progress-bar {
+      background: #f0f0f0;
+      box-shadow: inset 3px 3px 10px #ccc;
+    }
+    #progress::-webkit-progress-value {
+      background: #1d976c;
+      background: -webkit-linear-gradient(to right, #93f9b9, #1d976c);
+      background: linear-gradient(to right, #93f9b9, #1d976c);
+    }
+    body {
+      height: 500vh;
+    }
+  </style>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script>
+    $(window).scroll(function () {
+      var wins = $(this).scrollTop();
+      var hei = $("body").outerHeight(); //전체 페이지 높이
+      var hei2 = $(window).outerHeight(); //윈도우의 높이
+      var height = hei - hei2;
+      var bar = (wins / height) * 100;
+      $("#progress").val(bar);
+
+      console.log(bar);
+    });
+  </script>
+</html>

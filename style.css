@@ -1,0 +1,491 @@
+@font-face {
+  font-family: 'TheJamsil5';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TheJamsil2';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil2Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TheJamsil3';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil3Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TheJamsil4';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil4Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  word-break: keep-all;
+}
+
+.mainVisual {
+  z-index: 20;
+  text-align: center;
+  background-image: url(https://img.hyundaicard.com/docfiles/resources/pc/images/detail/bg_top_tpi.png);
+  overflow: hidden;
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  -webkit-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+  width: 100%;
+  height: 100vh;
+}
+
+.mainVisual h1 {
+  height: 40px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.mainVisual h1 img {
+  width: 100px;
+}
+
+.mainVisual .pinkEffect {
+  background-image: linear-gradient(-225deg, #fb1a77 0%, #ee8ab4 50%, #fff 70%, #fff 100%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: textclip 2s linear infinite;
+          animation: textclip 2s linear infinite;
+  display: inline-block;
+}
+
+@-webkit-keyframes textclip {
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes textclip {
+  to {
+    background-position: -200% center;
+  }
+}
+
+.mainVisual .mainTitle {
+  color: white;
+  padding: 60px 0;
+  font-family: 'TheJamsil5';
+  line-height: 1.6;
+}
+
+.mainVisual .mainTitle h2 {
+  margin: 0 auto;
+  font-size: 2rem;
+}
+
+.mainVisual .mainTitle h3 {
+  font-size: 1.2rem;
+}
+
+.mainVisual .scrollDown {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 17%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.mainVisual .scrollDown a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+}
+
+.mainVisual .scrollDown a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.mainVisual .scrollDown a span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: 0.15s;
+  animation-delay: 0.15s;
+}
+
+.mainVisual .scrollDown a span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+@-webkit-keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sdb07 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+section {
+  text-align: center;
+  background-color: aliceblue;
+  padding: 120px;
+  font-family: 'TheJamsil5';
+  margin: 0 auto;
+  width: 100%;
+}
+
+section h4 {
+  font-size: 4rem;
+  line-height: 1.5;
+}
+
+section h5 {
+  font-size: 2.8rem;
+  line-height: 1.5;
+  padding-bottom: 12px;
+}
+
+section h6 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  padding-bottom: 12px;
+}
+
+section .date {
+  padding: 20px;
+}
+
+.voucher {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0 20px;
+  height: 500px;
+}
+
+.voucher img {
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section:nth-child(4) {
+  background-color: #fb1a77;
+}
+
+section:nth-child(4) h4 {
+  padding-bottom: 40px;
+}
+
+section:nth-child(5) h4 {
+  padding-bottom: 100px;
+}
+
+section:nth-child(5) .tab-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 40px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+section:nth-child(5) .tab-btn li {
+  width: 25%;
+}
+
+section:nth-child(5) .tab-btn li h6 {
+  padding: 20px 0 30px;
+}
+
+section:nth-child(5) .tab-btn li img {
+  width: 60%;
+}
+
+section:nth-child(5) .tab-btn li img:hover {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+section:nth-child(6) {
+  background-color: #9f40df;
+}
+
+section:nth-child(6) .notice {
+  color: black;
+  padding-bottom: 60px;
+}
+
+.event1 {
+  width: 80%;
+  margin: 0 auto;
+  border: 3px solid black;
+  border-radius: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.event1 li {
+  padding: 80px 0;
+}
+
+.event2 {
+  width: 80%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 80px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.event2 li {
+  width: 50%;
+  padding: 10px 5px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.event2 li .aBenefit {
+  text-align: left;
+  height: 500px;
+  border-radius: 20px;
+  background-color: white;
+  border: 3px solid black;
+  margin: 0 auto;
+  padding: 50px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+.event2 li .aBenefit h5 {
+  line-height: 1.2;
+  padding-bottom: 30px;
+}
+
+.event2 li .aBenefit img {
+  position: absolute;
+  bottom: 8%;
+  right: 8%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 120px;
+  height: 120px;
+}
+
+li {
+  padding: 100px 0;
+}
+
+li h5 {
+  font-size: 2.5rem;
+  line-height: 0.8;
+}
+
+li .date {
+  color: gray;
+}
+
+li .pink {
+  color: #fb1a77;
+}
+
+.cardWrap {
+  display: block;
+  height: 400px;
+}
+
+.card {
+  display: inline-block;
+  width: 260px;
+  height: 400px;
+  background-image: url("https://card.hyundaicard.com/img_2023/event/new_vpn50/Stain_f.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  padding: 20px 120px;
+  font-family: 'TheJamsil2';
+  font-size: 0.8rem;
+}
+
+footer .noti {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer .bold {
+  font-family: 'TheJamsil4';
+  padding: 20px 0 10px;
+}
+
+footer ul li {
+  padding: 4px 0;
+}
+
+.applyBtns {
+  z-index: 21;
+  width: 100%;
+  height: 83px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: -83px;
+  left: 0;
+}
+
+.applyBtns a {
+  text-decoration: none;
+  width: 50%;
+  padding: 30px 0;
+  text-align: center;
+  color: white;
+  font-family: 'TheJamsil5';
+  font-size: 1.4rem;
+  -webkit-box-shadow: 5px 0px 30px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 0px 30px 1px rgba(0, 0, 0, 0.5);
+}
+
+.applyBtns .applyBtn1 {
+  background-color: black;
+}
+
+.applyBtns .applyBtn2 {
+  background-color: #fb1a77;
+}
+
+.pink {
+  color: #fb1a77;
+}
+
+.doted {
+  border: 0px;
+  width: 500px;
+  border-top: 5px dotted #b0b0b0;
+}
+
+.notice {
+  font-family: 'TheJamsil2';
+  color: #545454;
+  line-height: 1.4;
+}
+
+.h4Sub {
+  font-size: 1.8rem;
+}
+
+button {
+  padding: 24px 180px;
+  border-radius: 50px;
+  border: none;
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  font-family: 'TheJamsil5';
+  font-size: 1.4rem;
+}
+
+.show {
+  -webkit-transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  opacity: 0;
+}
+
+.show.visible {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+#progress {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  height: 4px;
+}
+
+#progress::-webkit-progress-bar {
+  background: #ffffff;
+  -webkit-box-shadow: inset 3px 3px 10px rgba(208, 208, 208, 0.091);
+          box-shadow: inset 3px 3px 10px rgba(208, 208, 208, 0.091);
+}
+
+#progress::-webkit-progress-value {
+  background: #000000;
+}
+/*# sourceMappingURL=style.css.map */

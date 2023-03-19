@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="letter-body">
+        <div class="letter-l"></div>
+        <div class="letter-r"></div>
+
+        <div class="paper"></div>
+
+        <div class="letter-top"></div>
+      </div>
+
+      <div class="btn">shoot me an email</div>
+    </div>
+  </body>
+  <style>
+      :root{
+      --bgColor:rgb(59, 50, 66);
+    }
+    .letter-body{
+      width:400px;
+      height:200px;
+      background-color:rgb(207, 203, 196);
+      position:relative;
+      box-shadow:0px 1px 24px rgba(255, 38, 103,0);
+
+      cursor:pointer;
+      margin:auto;
+      position:absolute;
+      transform-origin: center;
+      top:50vh; left:50%;
+      transform: translate(-50%,-50%) scale(.5);
+      z-index;0;
+
+      transition:.4s ease;
+    }
+
+    .letter-l,
+    .letter-r{
+      width:0px;
+      height:0px;
+      display:inline-block;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+
+    .letter-l{
+      border-style:solid;
+      border-color:transparent rgb(227,227,218) transparent transparent;
+      border-width:200px 400px 0px 0px;
+      z-index:4;
+    }
+    .letter-r{
+      border-style:solid;
+      border-color:transparent transparent transparent rgb(222, 222, 211);
+      border-width:200px 0px 0px 400px;
+      z-index:3;
+    }
+    .letter-top{
+      position:absolute;
+      top:0;
+     /* left:50%;
+      transform:translateX(-50%);*/
+      width:0;
+      height:0;
+      z-index:3;
+
+      border-style:solid;
+      border-color:rgb(237, 237, 227) transparent;
+      border-width:100px 200px 0 200px;
+      transform-origin:0 0;
+      /*transform:rotate3d(1,0,0,0deg);*/
+    }
+
+
+    .paper{
+      position:absolute;
+      top:0;
+      left:50%;
+      transform:translateX(-50%);
+      width:90%;
+      height:100%;
+      background-color:white;
+      box-shadow:0px 0px 10px rgba(33,33,33,.3);
+      z-index:2;
+    }
+
+    /*---------- positioning ----------*/
+
+    body{
+      background-color:rgb(59, 50, 66);
+      text-align:center;
+    }
+    .container{
+      position:relative;
+    }
+
+    .btn{
+      cursor:pointer;
+      color:rgb(255, 255, 255);
+      font-family:arial, san-serif;
+      text-transform:uppercase;
+      font-size:18px;
+      /*background-color:yellow;*/
+      border:solid 1px white;
+      width:12em;
+      padding:1em;
+      position:absolute;
+      top:calc(50vh + 120px);
+      left:50%;
+      transform: translate(-50%,-50%);
+
+    }
+    .btn:after{
+      transition:.35s cubic-bezier(.5,.0,0,1);
+      content:'';
+      width:0%;
+      height:100%;
+      position:absolute;
+      top:0;left:0;
+      background-color:rgba(255, 38, 103,1);
+      opacity:.3;
+      z-index:-1;
+    }
+    .btn:hover{
+    }
+    .btn:hover:after{
+      width:100%
+    }
+    /*---------animation------------*/
+
+
+    @keyframes letter-open{
+      0%{
+        transform:rotate3d(1,0,0,0deg);
+        border-color:rgb(237, 237, 227) transparent;
+      }
+      100%{
+       transform:rotate3d(1,0,0,-180deg);
+        border-color:rgb(195, 190, 182) transparent;
+      }
+    }
+
+    .letter-top{
+      animation:letter-open .7s ease-out;
+      animation-delay:.1s;
+      animation-direction:normal;
+      animation-fill-mode:forwards;
+    }
+
+    .letter-body{
+      transform: translate(-50%,-58%) scale(.53);
+      box-shadow:0px 1px 24px rgba(255, 38, 103,0.8);
+      transition-delay:.05s;
+    }
+  </style>
+</html>
