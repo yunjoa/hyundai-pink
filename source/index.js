@@ -1,4 +1,10 @@
 $(function () {
+  // 팝업닫기
+  $(".close-popup").click(function () {
+    $(".popup-container").hide();
+  });
+
+  //스크롤
   $("a[href*=#]").on("click", function (e) {
     e.preventDefault();
     $("html, body").animate(

@@ -35,6 +35,51 @@ body{
 
 
 
+
+// 팝업
+
+.popup-container{
+  text-align: center;
+}
+.popup-content {
+  background-color: #fff;
+  padding: 40px 40px 20px;
+  width: 500px;
+  border-radius: 5px;
+  z-index: 9999;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  h2{
+    font-family: 'TheJamsil3';  
+    padding-bottom: 20px;
+    font-size: 18px;
+  }
+  .popup-Ul > li{
+    text-align: left;
+
+    padding: 7px;
+    list-style-type: disc;
+    line-height: 1.2;
+    a{
+      color: black;
+    }
+  }
+}
+
+
+.close-popup {
+  margin-top: 30px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
 // 메인섹션
 
 
